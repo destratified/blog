@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "wp-content/howto create repos and install Obsidian using git remote folders.md",
+                "file": "wp-content/trial 2.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "howto create repos and install Obsidian using git remote folders"
+              "title": "trial 2"
             }
           }
         ]
@@ -182,8 +182,9 @@
   },
   "active": "39db9619144dbb49",
   "lastOpenFiles": [
-    "wp-content/Now through obsidian.md",
     "wp-content/howto create repos and install Obsidian using git remote folders.md",
+    "wp-content/trial 2.md",
+    "wp-content/Now through obsidian.md",
     "Untitled.md",
     "README.md"
   ]
