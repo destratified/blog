@@ -1,0 +1,222 @@
+{
+  "main": {
+    "id": "8a4a98e23eab96c0",
+    "type": "split",
+    "children": [
+      {
+        "id": "65ef9bc4f0aa660e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "39db9619144dbb49",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "wp-content/obsidian git repo sync android app.md",
+                "mode": "source",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "obsidian git repo sync android app"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "ee9f35537fe3f10f",
+    "type": "split",
+    "children": [
+      {
+        "id": "a65814b80109f545",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2088bd355c5ccc19",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "byCreatedTime",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "e982f8c6511b5afd",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "b14483b3be1a6a40",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "ded0cac8038b2f66",
+    "type": "split",
+    "children": [
+      {
+        "id": "ceb728155d83b336",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ab0058970798b6ab",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "wp-content/Now through obsidian.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Now through obsidian"
+            }
+          },
+          {
+            "id": "ce0dbd5082973178",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "wp-content/Now through obsidian.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Now through obsidian"
+            }
+          },
+          {
+            "id": "b51b19f02ec906e8",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "e72ab03e751cd8a9",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "wp-content/Now through obsidian.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Now through obsidian"
+            }
+          },
+          {
+            "id": "e4e7c0ff02691334",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "e4e7c0ff02691334",
+  "lastOpenFiles": [
+    "notes/obsidian_notes.git/info/exclude",
+    "notes/obsidian_notes.git/hooks/update.sample",
+    "notes/obsidian_notes.git/hooks/sendemail-validate.sample",
+    "notes/obsidian_notes.git/hooks/push-to-checkout.sample",
+    "notes/obsidian_notes.git/hooks/prepare-commit-msg.sample",
+    "notes/obsidian_notes.git/hooks/pre-receive.sample",
+    "notes/obsidian_notes.git/hooks/pre-rebase.sample",
+    "notes/obsidian_notes.git/hooks/pre-push.sample",
+    "notes/obsidian_notes.git/hooks/pre-merge-commit.sample",
+    "notes/obsidian_notes.git/hooks/pre-commit.sample",
+    "notes/obsidian_notes.git/hooks/pre-applypatch.sample",
+    "notes/work/Work Shit.md",
+    "notes/work/Jobs while I'm gone.md",
+    "notes/work/Angler's wine rm.md",
+    "notes/trip prep/Tools to pack.md",
+    "notes/trip prep/Things to do before I leave.md",
+    "notes/travel notes/Norway.md",
+    "notes/todo - home/Todo.md",
+    "notes/taxi way/Taxi Way electric meters.md",
+    "notes/important/really important shit.md",
+    "notes/important/important notes.md",
+    "notes/important/cards.md",
+    "notes/computer/Things to do.md",
+    "notes/computer/Changes from stock lappy.md",
+    "notes/car/Radiator.md",
+    "notes/car/FJ55 mileage.md",
+    "notes/car/FJ55 Maintenance.md",
+    "notes/README.md",
+    "notes/Colorado HEAR and HER.md",
+    "notes/Animal Care.md",
+    "wp-content/howto create repos and install Obsidian using git remote folders.md",
+    "wp-content/obsidian git repo sync android app.md",
+    "wp-content/trial 2.md",
+    "wp-content/Now through obsidian.md",
+    "Untitled.md",
+    "README.md"
+  ]
+}
