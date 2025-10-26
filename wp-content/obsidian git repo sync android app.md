@@ -1,20 +1,15 @@
-so the basics of this is the app setup essentially has the same access to the git community repository, so the setup between android and linux is pretty much the same.  
-1. with and existing folder already created or if you boot the app for the first time - you need to create a folder (mine required sync existing folder)
-2. for this exercise we are going to create a new folder (I use scopes) somewhere in the android fs.
-3. i have mine set as obsidian > notes so ill select obsidian again.  that way when we use the git clone, it will add the existing repo folder alongside the notes folder in my case
-4. after the folder has been created and you now see the main screen, you need to swipe left to right to access the menu and click the cog
-5. add the community repos > search for git and enable.
-6. go into the settings and add your  username and token to the appropriate sections
-7. in the android app, to access the commands tab, you will swipe screen from top tp bottom.  this brings up the same menu that ctrl + p does in linux.
-8. type git: clone and then you will need to add the url in the following format:
-```
-https://gitea.your.domain/<user>/blog.git
-```
-8. make sure if there was a .obsidian directory in the clone that it is deleted.
-9. answer yes to all the prompts.
-10. then you should be able to restart the app and see the cloned files in your new folder!
-11. but its not working great, but i think I got in now
-12. Gotta rewrite this whole sum bitch
+so the basics of this is the app setup essentially has the same access to the git community repository, so the setup between android and linux is pretty much the same, yet different enough that you have to follow the below procedure - this specifically seems to be the way that you have to do it imho
 
-
-
+1) if you have another installation of obsidian (like on your laptop/desktop): you must delete the .obsidian files in this folder to get this to play nicely when setting up the repo on android. the easiest way for me to do this was to delete the .obsidian folder using rm -r .obsidian/ on my local gitea folder, then git push to sync with gitea.
+2) now setup whatever folder you want to access within android through the files app - i have two folders, so i went to my directory root and added notes and blog folders
+3) on a fresh install use the add existing folder and select the folder you want to use for obsidian.  in my case notes
+4) now obsidian should take you into the note screen with a fresh directory, no other files present
+5) go to the menu and settings cog and add communtity repos then search add and install git
+6) enable git plugin and add as many details as you can.  i like to tweak some settings and add my repo username and gitera access token.
+7) you will now need to swipe down and enter the same menu you would access with ctrl + p in the desktop version.
+8) you are now going to type git clone and select what comes up first
+9) add your gitea url to the repo
+10) select vault root
+11) next question will ask you if you have .obsidian files in the remote dir.  before you select yes...access the files app in android, goto the folder you setup (in my case notes and delete the new .obsidian folder thats in the android folder!!!
+12) now back in the app click NO to the prompt about the .obsidian folders.  
+13) it will now pull the repo and ask you to restart the app.  do that and verify the folders/files have shown up
