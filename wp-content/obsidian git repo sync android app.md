@@ -14,5 +14,5 @@ https://gitea.your.domain/<user>/blog.git
 9. answer yes to all the prompts.
 10. then you should be able to restart the app and see the cloned files in your new folder!
 11. but its not working great, but i think I got in now
-12. 
+12. Gotta rewrite t
 
