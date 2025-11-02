@@ -1,3 +1,40 @@
+# Update TL;DR
+so i ended up having some issues getting the proxmox-backup-client command to run, using sudo and after getting into the forums realized that i could su to root, move the file there, and append changes, chmod to execute and add the cronjob under the root user.  this eliminates the need all together for the sudo command!
+
+heres the updated file i saved in the /root/ directory:
+```
+#!/bin/bash
+
+##Setting environmental variables
+export PBS_USER=archy
+export PBS_PASSWORD=<urpasswd>
+export PBS_REPOSITORY=archy@pbs@192.168.50.3:8007:not-server2
+
+##Checking network connectivity
+ping -c 1 192.168.50.3 | grep "bytes from" > /dev/null
+if [ $? -eq 0 ]; then
+    echo "$(date '+%Y-%m-%d %H:%M:%S') - Network is connected" >> /home/joe/backup.log
+else
+    echo "$(date '+%Y-%m-%d %H:%M:%S') - Network is not connected" >> /home/joe/backup.log
+    echo "$(date '+%Y-%m-%d %H:%M:%S') - Backup failed" >> /home/joe/backup.log
+    exit 1
+fi
+
+##Sudo command with -E to preserve the env variables
+proxmox-backup-client backup root.pxar:/ --include-dev /home
+
+#testing backup error loop
+if [ $? -eq 0 ]; then
+    echo "$(date '+%Y-%m-%d %H:%M:%S') - Backup completed successfully" >> /home/joe/backup.log
+else
+    echo "$(date '+%Y-%m-%d %H:%M:%S') - Backup failed" >> /home/joe/backup.log
+fi  
+```
+
+you can test by running the script backup.sh to make sure it works without erroring out with the above changes.
+
+# OG text
+
 so i created a bash script and was having it err anytime i wasnt actually logged into a terminal
 after some poking around it hadn't executed as sudo for the bash script in a while and realized that there was an issue passing sudo password to the backup command
 i will preface this with i am still not sure if this is working, but i will know by 4pm today.  here's my script:
@@ -68,4 +105,5 @@ crontab -l | grep -v '^#' | cut -f 6- -d ' ' | while read CMD; do eval $CMD; don
 
 the crontab command above will cycle through and test execution of all of the commands in crontab sequentially, so just keep that in mind.  I only have this one and a gitea script for updating my repo, so nbd to have it execute them all.
 
-ill report back later if this is the fix, but with some network debugging and script debugging i should get updated on the script as its processed!
+ill report back later if this is the fix, but with some network debugging and script debugging i should get updated on the script as its processed
+
