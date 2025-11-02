@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "wp-content/obsidian git repo sync android app.md",
+                "file": "wp-content/getting backup to work on desktop via PVE.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "obsidian git repo sync android app"
+              "title": "getting backup to work on desktop via PVE"
             }
           }
         ]
@@ -182,8 +182,9 @@
   },
   "active": "39db9619144dbb49",
   "lastOpenFiles": [
-    "wp-content/about.md",
     "wp-content/obsidian git repo sync android app.md",
+    "wp-content/getting backup to work on desktop via PVE.md",
+    "wp-content/about.md",
     "notes/obsidian_notes.git/info/exclude",
     "notes/obsidian_notes.git/hooks/update.sample",
     "notes/obsidian_notes.git/hooks/sendemail-validate.sample",
@@ -216,7 +217,6 @@
     "wp-content/howto create repos and install Obsidian using git remote folders.md",
     "wp-content/trial 2.md",
     "wp-content/Now through obsidian.md",
-    "Untitled.md",
-    "README.md"
+    "Untitled.md"
   ]
 }
