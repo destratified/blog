@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "wp-content/Some useful shit you can do with tailscale.md",
+                "file": "wp-content/getting backup to work on desktop via PVE.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Some useful shit you can do with tailscale"
+              "title": "getting backup to work on desktop via PVE"
             }
           }
         ]
@@ -182,8 +182,8 @@
   },
   "active": "39db9619144dbb49",
   "lastOpenFiles": [
-    "wp-content/getting backup to work on desktop via PVE.md",
     "wp-content/Some useful shit you can do with tailscale.md",
+    "wp-content/getting backup to work on desktop via PVE.md",
     "wp-content/obsidian git repo sync android app.md",
     "wp-content/about.md",
     "notes/obsidian_notes.git/info/exclude",

@@ -99,7 +99,7 @@ the export variables tell the system to use nano instead of vi, i don't use vi, 
 
 this is a good time to make sure you  had the script made executable as we are testing with the following command, so if you haven't already:
 ```
-sudo chmod +x /path/to/script.sh
+sudo chmod +x /path/to/script.s
 crontab -l | grep -v '^#' | cut -f 6- -d ' ' | while read CMD; do eval $CMD; done
 ```
 
