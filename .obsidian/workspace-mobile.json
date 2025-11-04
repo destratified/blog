@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "wp-content/obsidian git repo sync android app.md",
+                "file": "Some useful shit you can do with tailscale.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "obsidian git repo sync android app"
+              "title": "Some useful shit you can do with tailscale"
             }
           }
         ]
@@ -165,9 +165,12 @@
   },
   "active": "1f253ae8cec845f6",
   "lastOpenFiles": [
-    "/wp-content/obsidian git repo sync android app.md",
-    "/wp-content",
     "wp-content/obsidian git repo sync android app.md",
+    "Some useful shit you can do with tailscale.md",
+    "/wp-content/getting backup to work on desktop via PVE.md",
+    "wp-content/getting backup to work on desktop via PVE.md",
+    "/wp-content",
+    "/wp-content/obsidian git repo sync android app.md",
     "wp-content/howto create repos and install Obsidian using git remote folders.md",
     "wp-content/bloggy101.md",
     "wp-content/about.md",
