@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Some useful shit you can do with tailscale.md",
+                "file": "wp-content/Some useful shit you can do with tailscale.md",
                 "mode": "source",
                 "source": false
               },
@@ -163,10 +163,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "1f253ae8cec845f6",
+  "active": "3b0f2a52a8165aad",
   "lastOpenFiles": [
     "wp-content/obsidian git repo sync android app.md",
-    "Some useful shit you can do with tailscale.md",
+    "wp-content/Some useful shit you can do with tailscale.md",
     "/wp-content/getting backup to work on desktop via PVE.md",
     "wp-content/getting backup to work on desktop via PVE.md",
     "/wp-content",
