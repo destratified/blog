@@ -17,4 +17,4 @@ caveats:  with this method i get a larger fullscreen with rdp, but if like today
 most of the nitty gritty is written up in the discussion on github here:
 https://github.com/StorageB/custom-command-toggle/discussions/18#discussioncomment-14591824
 but the lowdown is this...
-i was looking for 
+i was looking for for a solution for any easy start/stop option for the 
