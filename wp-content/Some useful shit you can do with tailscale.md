@@ -16,5 +16,7 @@ caveats:  with this method i get a larger fullscreen with rdp, but if like today
 # Gnome notifications and menu toggle button
 most of the nitty gritty is written up in the discussion on github here:
 https://github.com/StorageB/custom-command-toggle/discussions/18#discussioncomment-14591824
-but the lowdown is this...
-i was looking for for a solution for any easy start/stop option for the 
+add the extension below to gnome using the extensions menu in chrome/brave
+command-custom-toggle and install then go into settings and follow the below:
+
+i was looking for for a solution for any easy start/stop option for the custom tailscale bash script i've setup for connecting to my home server while away.  i use the home server as an exit route which helped with the above stuff as well, and use routes for accessing everything on a certain lan at home
