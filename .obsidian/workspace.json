@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "wp-content/getting backup to work on desktop via PVE.md",
+                "file": "wp-content/this ones a doozy - gitea sync ansible update playbooks.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "getting backup to work on desktop via PVE"
+              "title": "this ones a doozy - gitea sync ansible update playbooks"
             }
           }
         ]
@@ -183,6 +183,7 @@
   "active": "39db9619144dbb49",
   "lastOpenFiles": [
     "wp-content/Some useful shit you can do with tailscale.md",
+    "wp-content/this ones a doozy - gitea sync ansible update playbooks.md",
     "wp-content/getting backup to work on desktop via PVE.md",
     "wp-content/obsidian git repo sync android app.md",
     "wp-content/about.md",
@@ -216,7 +217,6 @@
     "notes/Colorado HEAR and HER.md",
     "notes/Animal Care.md",
     "wp-content/howto create repos and install Obsidian using git remote folders.md",
-    "wp-content/trial 2.md",
-    "wp-content/Now through obsidian.md"
+    "wp-content/trial 2.md"
   ]
 }
