@@ -98,3 +98,163 @@ this will ask to accept fingerprint, say yes. the password (root user pass in my
 after all that you should be able to use the hosts file to talk to all the machines that you wanna update/upgrade. 
 
 next is the ansible.cfg file, here's mine:
+```
+#ansible config file
+[defaults]
+inventory = ./inventory
+
+[privilege_escalation]
+become = True
+become_method = sudo
+become_user = root
+become_user_file = ./password.txt
+
+```
+here's pretty simple....
+in ini format again, under defaults, set your inventory directory so ansible knows where to find the hosts file. 
+the rest is pretty obvious - become root, using sudo after sshing into the machine.
+i store my password in a chmod 600 password.txt file in my ansible folder, could be anywhere, really. and while troubleshooting and setting this up i had my root password in plaintext here, cause who gives a fuck.
+
+# playbooks
+
+now here's the meat and potatoes.  had lotsa ssh issues, troubleshooting was tedious, but after all that i got it sorted and borrowed a playbook from 
+https://www.jacob-swanson.com/posts/automating-proxmox-maintenance-with-ansible/
+with a simple command to test connections to all lxcx vms etc in the host file.
+
+```
+- name: Ping
+  hosts: all
+  tasks:
+    - name: Ping
+      ansible.builtin.ping:
+```
+
+for me this was saved as ping.yml in the /ansible/playbooks dir
+execute it with the following command
+```
+ansible-playbook playbooks/ping.yaml
+```
+now why did i break my hosts file up with [ubuntu][arch][pve][pvb]?
+so that when i built out the following playbooks i could run individual playbooks for ubuntu arch etc, with different layouts (pacman vs apt) and then have a unified playbook that would call them all: update-all 
+
+heres the playbooks i have: 
+update-ubuntu.yml
+```
+#update ubuntu lxc, vms
+---
+- hosts: [ubuntu]
+  remote_user: root
+  name: update apt
+  #serial: 1
+
+  tasks:
+  - name: apt update
+    apt:
+      update_cache: yes
+      force_apt_get: yes
+      cache_valid_time: 3600
+
+  - name: apt dist-upgrade
+    apt:
+      upgrade: dist
+
+  - name: remove old packages and clean cache
+    apt:
+      autoremove: yes
+      autoclean: yes
+      clean: yes
+
+  - name: Check if reboot is needed
+    stat:
+      path: /var/run/reboot-required
+    register: reboot_required
+  - name: Check if reboot is needed
+    stat:
+      path: /var/run/reboot-required
+    register: reboot_required
+
+  - name: End playbook if no reboot is required
+    meta: end_host
+    when: not reboot_required.stat.exists
+
+  - name: Reboot the system
+    reboot:
+      msg: "Reboot initiated by Ansible due to system updates"
+      pre_reboot_delay: 3600
+      post_reboot_delay: 300
+      reboot_timeout: 5400
+    when: reboot_required.stat.exists   
+```
+nothing too crazy here.  i have serial: 1 commented out, if you uncomment that, it will step through each IP one-at-a-time.  you should be using dist-upgrade for these, and especially the host and pvb.
+
+update-arch.yml
+```
+#update arch
+---
+- hosts: [arch]
+  remote_user: root
+  tasks:
+    - name: Full system upgrade
+      community.general.pacman:
+        update_cache: true
+        upgrade: true
+
+```
+nothing unusual here
+
+update-pvs.yml
+```
+#update pve,pvb
+---
+- hosts: [pve, pvb]
+  remote_user: root
+  name: update apt
+  serial: 1
+
+  tasks:
+  - name: apt update
+    apt:
+      update_cache: yes
+      force_apt_get: yes
+      cache_valid_time: 3600
+
+  - name: apt dist-upgrade
+    apt:
+      upgrade: dist
+
+  - name: remove old packages and clean cache
+    apt:
+      autoremove: yes
+      autoclean: yes
+      clean: yes
+
+  - name: Check if reboot is needed
+    stat:
+      path: /var/run/reboot-required
+    register: reboot_required
+
+  - name: End playbook if no reboot is required
+    meta: end_host
+    when: not reboot_required.stat.exists
+  - name: Reboot the system
+    reboot:
+      msg: "Reboot initiated by Ansible due to system updates"
+      pre_reboot_delay: 3600
+      post_reboot_delay: 300
+      reboot_timeout: 5400
+    when: reboot_required.stat.exists   
+
+```
+here serial: 1 is uncommented to step through each proxmox server individually.
+since my ansible instance is on proxmox, if its kernal is updated, the host will reboot and kill the ansible program.  this doesnt happen often - last time my uptime was 59 days.  you just need to reboot it again.  you could also comment that out or delete it and run it manually, im going to try it with hosts: [pvb][pve] and see if that does the proxmox host last, so everything is completed before a reboot JIC
+
+update-all.yml
+```
+#update whole shebang
+---
+- import_playbook: update-ubuntu.yml
+- import_playbook: update-arch.yml
+- import_playbook: update-pvs.yml
+
+```
+here we are using the import function, pulling all other playbooks in, and running in the sequence of line items
