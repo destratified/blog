@@ -206,7 +206,7 @@ update-pvs.yml
 ```
 #update pve,pvb
 ---
-- hosts: [pve, pvb]
+- hosts: [pvb, pve]
   remote_user: root
   name: update apt
   serial: 1
@@ -245,8 +245,8 @@ update-pvs.yml
     when: reboot_required.stat.exists   
 
 ```
-here serial: 1 is uncommented to step through each proxmox server individually.
-since my ansible instance is on proxmox, if its kernal is updated, the host will reboot and kill the ansible program.  this doesnt happen often - last time my uptime was 59 days.  you just need to reboot it again.  you could also comment that out or delete it and run it manually, im going to try it with hosts: [pvb][pve] and see if that does the proxmox host last, so everything is completed before a reboot JIC
+here serial: 1 is un-commented to step through each proxmox server individually.
+since my ansible instance is on proxmox, if its kernal is updated, the host will reboot and kill the ansible program.  this doesnt happen often - last time my uptime was 59 days.  you could just reboot ita nd run it again. however, i placed the pvb first in the hosts: [pvb][pve] so that does the proxmox host last, so everything is completed before a reboot JIC
 
 update-all.yml
 ```
@@ -257,4 +257,47 @@ update-all.yml
 - import_playbook: update-pvs.yml
 
 ```
-here we are using the import function, pulling all other playbooks in, and running in the sequence of line items
+here we are using the import function, pulling all other playbooks in, and running in the sequence of line items.
+
+# just for funsies
+literally ran across the "just" program googling ansible playbooks.  its a pretty nifty program.  it allows you to command run things in the justfile you create and simplifies the commands from the ansible-playbook ... execution.  
+install just
+apt update && apt install just
+then make a justfile, mine lives in the /ansible directory
+nano justfile
+here's how mine looks:
+```
+# Show help
+help:
+    @just --list --unsorted
+
+# Ping all hosts
+ping:
+    ansible-playbook playbooks/ping.yml
+
+# Update all 
+update-all:
+    ansible-playbook playbooks/update-all.yml
+
+# Arch Updates
+update-arch:
+    ansible-playbook playbooks/update-arch.yml
+
+# Ubuntu Updates
+update-ubuntu:
+    ansible-playbook playbooks/update-ubuntu.yml
+
+# Server (host) Updates
+update-pvs:
+    ansible-playbook playbooks/update-pvs.yml
+```
+
+you can see here i stuck all of my playbook commands in here, they are all broken up by some command name.  
+so the sweet thing is that to execute that playbook, you can type "just" and whatever's designated in that file.
+just update-all 
+just ping
+just update-ubuntu 
+etc, etc, etc...
+now the really cool thing is that you can use this "just" command runner anywhere.  so if you have git directories you wanna update automagically you can just drop a justfile in there with a git fetch section, git pull, git push etc.  and execute that instead of going through each dir.  the possibilities are endless!
+
+so what's next?  im working on the proxmoxer and API calls for my proxmox host, to use with ansible so i can create vms, or lxcs with ansible commands etc.  to be continued....
