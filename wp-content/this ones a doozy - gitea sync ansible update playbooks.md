@@ -5,9 +5,96 @@ goals:
 4. make folders into a git repo (gitea for me)
 5. sync everything
 6. nano hosts file, ansible.cfg
-7. build out playbooks for each system [arch], [ubuntu] and [PVE,PVB-pvs], figure out ssh, and ssh-copy-id, sshd_config and what the fuck works for passwords and not - still stuck with a password in the ansible.cfg
+7. build out playbooks for each system [arch], [ubuntu] and [PVE,PVB], figure out ssh, and ssh-copy-id, sshd_config and what the fuck works for passwords and not - still stuck with a password in the ansible.cfg
 8. make a comprehensive update-all.yml playbook for a cron job
 9. do a buncha bit work putting all the sshd_configs back to #PermitRootLogin password_disabled - maybe I can write a playbook for that!
 
 # so here it goes:
 the ansible lxc creation was probably the easiest of all these things to do.  i setup a new lxc container with the usual specs:
+
+Deb13, 2gb RAM, 8GB disk, network etc...this can be really much smaller than i went with
+
+boot into LXC login with root and:
+```
+apt update && apt upgrade && apt install curl wget ansible sudo 
+```
+
+most of these will already be installed, but its good to check, with ansible installed, now i had to figure out how to use it.
+ansible will run from any folder, so its up to you how to configure your folder structure and where.  i went with a new ansible folder off of root:
+```
+mkdir -p /ansible /ansible/playbooks /ansible/inventory /ansible/roles
+chmod 775 -R /ansible
+touch /ansible/inventory/hosts
+touch /ansible/ansible.cfg
+touch /roles/roles.txt
+touch /ansible/playbooks/playbook.yml
+```
+this was a basic folder structure i found on the internet, and is probably fine for most applications, some others have set this up for projects using /ansible/<project_name>/playbooks etc, i just needed it for writing playbooks for my proxmox host, so a single dir is fine
+with the basic folder structure in place, i wanted to get that structure and files all synced with a gitea repo.
+for me, i created a new private ansible repo on gitea, with a readme and nothing else, then followed the instructions to add files/folders and sync remotely with a previous gitea token, results will vary, but it looked something like this:
+```
+git init
+git checkout -b main
+git add .
+git commit -m "first commit"
+git remote add origin https://gitea.destratify.pro/joe/test.git
+git push -u origin main
+```
+
+then you can check gitea or github, and verify that the folder structure is all there.  above we added some files with touch to basically become placeholders as the folders wont import unless the directorys have content of some sort.
+
+so at this point, we have ansible, we have have a directory synced with git (i use a bash script to update all my gitea folders every 8 hrs JIC) but for now we can start building content in those folders.  
+
+# building out ansible folders/files
+
+so the first things to do are to create a hosts file.  we have a placeholder so you can just nano into that from the /ansible folder
+nano /ansible/inverntory/hosts
+this can follow either ini syntax or yaml...i went with ini, as it was the format i was borrowing from some guide i can't find again.  here's what mine looks like:
+```
+#hosts file
+
+[ubuntu]
+192.168.50.70
+192.168.50.75
+192.168.50.8
+192.168.50.73
+192.168.50.205
+192.168.50.14
+192.168.50.201
+192.168.50.20
+192.168.50.30
+192.168.50.13
+192.168.50.206
+192.168.50.74
+192.168.50.55
+
+[arch]
+192.168.50.16
+192.168.50.210
+
+[pve]
+192.168.50.2
+
+[pvb]
+192.168.50.3
+
+```
+
+this is how i decided to break it up...now is it the right way? dunno.  serves my purpose.  the reasoning behind it is this: i need to update my lxc and vm based on their systemOS, and I have ubuntu/deb, arch and my pve (host),and pvb backup that I want to be able to do individually, or as a whole group.
+to be able to talk to them we need to setup ssh-copy-id for each IP and set root login.  what a pain in the ass that is, has to be a way to do that with ansible too, but lets not get ahead of ourselves.
+from my host gui, enter console the console using root login.  edit the /etc/ssh/sshd_config
+find the commented line, #PermitRootLogin and uncomment and change to yes
+save and exit and reboot - i had some problems getting it to work sometimes with a systemctl deamon-reload and systemctl restart sshd so it was just easier to reboot as i went.
+next setup a key on the ansible machine.  
+```
+ssh-keygen -t rsa -b 4096
+```
+be mindful if you are logged in as something else besides root, i found you just need to be consistent as the dir it gets saved in is the home ~ for the logged in user.  and once that key  is saved you can use ssh-copy-id in the following format:
+
+ssh-copy-id root@192.168.50.5 
+
+this will ask to accept fingerprint, say yes. the password (root user pass in my case) is needed for the machine you are ssh-ing into, after that it should so you the key was added and try logging in....now do that like 17 times ;)
+
+after all that you should be able to use the hosts file to talk to all the machines that you wanna update/upgrade. 
+
+next is the ansible.cfg file, here's mine:
