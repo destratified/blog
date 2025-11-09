@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "wp-content/this ones a doozy - gitea sync ansible update playbooks for proxmox host.md",
+                "file": "wp-content/gitea sync ansible update playbooks for proxmox host - pt.2.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "this ones a doozy - gitea sync ansible update playbooks for proxmox host"
+              "title": "gitea sync ansible update playbooks for proxmox host - pt.2"
             }
           }
         ]
@@ -182,9 +182,10 @@
   },
   "active": "39db9619144dbb49",
   "lastOpenFiles": [
+    "wp-content/this ones a doozy - gitea sync ansible update playbooks for proxmox host - pt.1.md",
+    "wp-content/gitea sync ansible update playbooks for proxmox host - pt.2.md",
     "wp-content/after proxmox reboot, found a couple issues.md",
     "wp-content/Some useful shit you can do with tailscale.md",
-    "wp-content/this ones a doozy - gitea sync ansible update playbooks for proxmox host.md",
     "wp-content/getting backup to work on desktop via PVE.md",
     "wp-content/obsidian git repo sync android app.md",
     "wp-content/about.md",
@@ -216,7 +217,6 @@
     "notes/car/FJ55 Maintenance.md",
     "notes/README.md",
     "notes/Colorado HEAR and HER.md",
-    "notes/Animal Care.md",
-    "wp-content/howto create repos and install Obsidian using git remote folders.md"
+    "notes/Animal Care.md"
   ]
 }

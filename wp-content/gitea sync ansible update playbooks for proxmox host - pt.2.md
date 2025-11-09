@@ -1,0 +1,1 @@
+pretty much everything is working from my last post, i've been working on getting vm clones playbook functional
