@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "wp-content/gitea sync ansible update playbooks for proxmox host - pt.2.md",
+                "file": "wp-content/forgejo migrations.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "gitea sync ansible update playbooks for proxmox host - pt.2"
+              "title": "forgejo migrations"
             }
           }
         ]
@@ -182,8 +182,9 @@
   },
   "active": "39db9619144dbb49",
   "lastOpenFiles": [
-    "wp-content/this ones a doozy - gitea sync ansible update playbooks for proxmox host - pt.1.md",
     "wp-content/gitea sync ansible update playbooks for proxmox host - pt.2.md",
+    "wp-content/forgejo migrations.md",
+    "wp-content/this ones a doozy - gitea sync ansible update playbooks for proxmox host - pt.1.md",
     "wp-content/after proxmox reboot, found a couple issues.md",
     "wp-content/Some useful shit you can do with tailscale.md",
     "wp-content/getting backup to work on desktop via PVE.md",
@@ -216,7 +217,6 @@
     "notes/car/FJ55 mileage.md",
     "notes/car/FJ55 Maintenance.md",
     "notes/README.md",
-    "notes/Colorado HEAR and HER.md",
-    "notes/Animal Care.md"
+    "notes/Colorado HEAR and HER.md"
   ]
 }
