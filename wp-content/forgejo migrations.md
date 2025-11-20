@@ -9,4 +9,7 @@ apt update && apt dist-upgrade && apt install forgejo-sqlite && apt install cock
 5) i did a pretty vanilla setup just to get things going, it nagged me about an administrator so i did that too
 6) now i setup a token in gitea for http access and used it to migtrate all of my repos to the forgejo.  then on my local laptop, i deleted all my gitea folders and cloned the migrated repos from forgejo - yes this required another token.
 7) probably the most time consuming thing was doing this manually for 5 repos...i can't  imagine if i had 70 or something.
-8) i also deleted and recreated my ansible folders with the new forgejo
+8) i also deleted and recreated my ansible folders in my ansible lxc with the new forgejo one. this worked exactly as i had hoped. tested with my justfile just to be sure :)
+9) so after all this and testing, i went in and adjusted my obsidian installs on my phone to the forgejo repos and also did this on my laptop.
+10)  i backup/mirror all these repos to a private github as an additional safety.  this was the same method that i used with gitea.  erase all existing mirrored repos, create new ones (public and private as needed), and added back in the forgejo mirror that goes to public on github where my blog pulls posts from.
+11)  everything works and I think forgejo is just as pleasant to use as gitea, even a little snappier than gitea was.
