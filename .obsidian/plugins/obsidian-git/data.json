@@ -1,6 +1,6 @@
 {
-  "commitMessage": "{{date}}",
-  "autoCommitMessage": "{{date}}",
+  "commitMessage": "commit from laptop",
+  "autoCommitMessage": "commit from laptop",
   "commitMessageScript": "",
   "commitDateFormat": "YYYY-MM-DD HH:mm:ss",
   "autoSaveInterval": 10,
