@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "wp-content/codeberg.md",
+                "file": "wp-content/codeberg pt1.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "codeberg"
+              "title": "codeberg pt1"
             }
           }
         ]
@@ -180,10 +180,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "39db9619144dbb49",
+  "active": "e4e7c0ff02691334",
   "lastOpenFiles": [
     "wp-content/forgejo migrations.md",
-    "wp-content/codeberg.md",
+    "wp-content/codeberg pt1.md",
     "wp-content/gitea sync ansible update playbooks for proxmox host - pt.2.md",
     "wp-content/this ones a doozy - gitea sync ansible update playbooks for proxmox host - pt.1.md",
     "wp-content/after proxmox reboot, found a couple issues.md",
