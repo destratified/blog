@@ -1,0 +1,216 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Linea Blog 1.0.0\n"
+"POT-Creation-Date: 2025-10-08 19:47+0100\n"
+"PO-Revision-Date: 2020-07-21 14:18+0545\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.6\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x;_ex;_n;_nx;_n_noop;transate_nooped_plural;esc_html__;esc_html_e;esc_html_x;esc_attr__;esc_attr_e;esc_attr_x;number_format_i18n;date_i18n\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: blocks/node_modules\n"
+
+#: functions.php:86 patterns/footer.php:22
+msgid "Linea Blog"
+msgstr ""
+
+#: inc/wpopus.php:25
+msgid "Theme Documentation"
+msgstr ""
+
+#: inc/wpopus.php:29
+msgid "All Themes"
+msgstr ""
+
+#: inc/wpopus.php:67
+msgid ""
+"Transform your website with the power of wpOpus - The Ultimate Gutenberg "
+"Toolkit and Site Builder."
+msgstr ""
+
+#: inc/wpopus.php:68
+msgid "We highly recommend wpOpus for"
+msgstr ""
+
+#: inc/wpopus.php:68
+msgid ""
+"It brings one-click demo import, templates import, advanced blocks, and "
+"other features to help you build a beautiful website effortlessly."
+msgstr ""
+
+#: inc/wpopus.php:72 inc/wpopus.php:110
+msgid "Install and Activate"
+msgstr ""
+
+#: inc/wpopus.php:74
+msgid "Explore wpOpus"
+msgstr ""
+
+#: inc/wpopus.php:75
+msgid "Dismiss this notice"
+msgstr ""
+
+#: inc/wpopus.php:111
+msgid "Installed and Activated"
+msgstr ""
+
+#: inc/wpopus.php:112
+msgid "An error occurred. Please try again."
+msgstr ""
+
+#: inc/wpopus.php:113
+msgid ""
+"Are you sure you want to dismiss this recommendation? wpOpus offers demo "
+"import, template import, and advanced blocks for this theme."
+msgstr ""
+
+#: inc/wpopus.php:123 inc/wpopus.php:183
+msgid "You are not authorized to perform this action."
+msgstr ""
+
+#: inc/wpopus.php:128 inc/wpopus.php:188
+msgid "Nonce is missing."
+msgstr ""
+
+#: inc/wpopus.php:149
+msgid "wpOpus activated successfully!"
+msgstr ""
+
+#: inc/wpopus.php:173
+msgid "wpOpus installed and activated successfully!"
+msgstr ""
+
+#: inc/wpopus.php:197
+msgid "Dismissed successfully!"
+msgstr ""
+
+#: patterns/404.php:12
+msgid "404"
+msgstr ""
+
+#: patterns/404.php:16
+msgid "Oops! That page can't be found."
+msgstr ""
+
+#: patterns/404.php:20
+msgid ""
+"It looks like nothing was found at this location. Maybe try a search."
+msgstr ""
+
+#: patterns/footer.php:28
+msgid ""
+"Build and Attract audience with your online portfolio with lots of cool "
+"and exclusive features"
+msgstr ""
+
+#: patterns/footer.php:51
+msgid "Resources"
+msgstr ""
+
+#: patterns/footer.php:57
+msgid "Archives"
+msgstr ""
+
+#: patterns/footer.php:58
+msgid "Editorial Guidelines"
+msgstr ""
+
+#: patterns/footer.php:59
+msgid "Privacy Policy"
+msgstr ""
+
+#: patterns/footer.php:60
+msgid "Terms and Condition"
+msgstr ""
+
+#: patterns/footer.php:74
+msgid "Community"
+msgstr ""
+
+#: patterns/footer.php:80
+msgid "Support Us"
+msgstr ""
+
+#: patterns/footer.php:81
+msgid "Write for Us"
+msgstr ""
+
+#: patterns/footer.php:82
+msgid "Advertising"
+msgstr ""
+
+#: patterns/footer.php:83
+msgid "Collaborations"
+msgstr ""
+
+#: patterns/footer.php:97
+msgid "Get in Touch"
+msgstr ""
+
+#: patterns/footer.php:103
+msgid "General:"
+msgstr ""
+
+#: patterns/footer.php:104
+msgid "+1(505) 555-0125"
+msgstr ""
+
+#: patterns/footer.php:105
+msgid "info@example.com"
+msgstr ""
+
+#: patterns/footer.php:119
+#, php-format
+msgid "Copyright &copy; %1$s %2$s"
+msgstr ""
+
+#: patterns/footer.php:119
+msgid "Y"
+msgstr ""
+
+#: patterns/footer.php:119 patterns/latest-blogs.php:25
+msgid "By"
+msgstr ""
+
+#: patterns/footer.php:119
+msgid "wpOpus Dev"
+msgstr ""
+
+#: patterns/primary-sidebar.php:12
+msgid "About Me"
+msgstr ""
+
+#: patterns/primary-sidebar.php:29
+msgid "Chesung Subba"
+msgstr ""
+
+#: patterns/primary-sidebar.php:33
+msgid "Author/Writer"
+msgstr ""
+
+#: patterns/primary-sidebar.php:42
+msgid ""
+"Hello, I'm Chesung Subba, a passionate writer who loves sharing ideas, "
+"stories, and experiences to inspire, inform, and connect with readers "
+"through meaningful content."
+msgstr ""
+
+#: patterns/primary-sidebar.php:51
+msgid "Subscribe"
+msgstr ""
+
+#: patterns/primary-sidebar.php:63
+msgid "Follow Me"
+msgstr ""
+
+#: patterns/primary-sidebar.php:69
+msgid "Connect with me and be part of my social media community."
+msgstr ""

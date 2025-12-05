@@ -1,0 +1,191 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "title": "Lite",
+  "version": 3,
+  "settings": {
+    "appearanceTools": true,
+    "color": {
+      "duotone": [
+        {
+          "colors": ["#0d0d0d", "#ffffff"],
+          "name": "Dark and White",
+          "slug": "dark-and-white"
+        },
+        {
+          "colors": ["#0d0d0d", "#d4af37"],
+          "name": "Dark and Gold",
+          "slug": "dark-and-gold"
+        },
+        {
+          "colors": ["#0d0d0d", "#b8860b"],
+          "name": "Dark and Goldenrod",
+          "slug": "dark-and-goldenrod"
+        },
+        {
+          "colors": ["#0d0d0d", "#ffd700"],
+          "name": "Dark and Bright Gold",
+          "slug": "dark-and-bright-gold"
+        },
+        {
+          "colors": ["#1a1a1a", "#daa520"],
+          "name": "Charcoal and Light Gold",
+          "slug": "charcoal-and-light-gold"
+        },
+        {
+          "colors": ["#0d0d0d", "#ffcc00"],
+          "name": "Dark and Vivid Gold",
+          "slug": "dark-and-vivid-gold"
+        },
+        {
+          "colors": ["#1a1a1a", "#ffffff"],
+          "name": "Charcoal and White",
+          "slug": "charcoal-and-white"
+        },
+        {
+          "colors": ["#0d0d0d", "#996515"],
+          "name": "Dark and Bronze",
+          "slug": "dark-and-bronze"
+        },
+        {
+          "colors": ["#1a1a1a", "#ffb84d"],
+          "name": "Charcoal and Amber",
+          "slug": "charcoal-and-amber"
+        },
+        {
+          "colors": ["#0d0d0d", "#fff5cc"],
+          "name": "Dark and Soft Gold",
+          "slug": "dark-and-soft-gold"
+        }
+      ],
+      "gradients": [
+        {
+          "gradient": "linear-gradient(to bottom, #0d0d0d 0%, #d4af37 100%)",
+          "name": "Dark to Gold Vertical",
+          "slug": "dark-to-gold-vertical"
+        },
+        {
+          "gradient": "linear-gradient(to right, #ffd700 0%, #0d0d0d 100%)",
+          "name": "Bright Gold to Dark Horizontal",
+          "slug": "bright-gold-to-dark-horizontal"
+        },
+        {
+          "gradient": "linear-gradient(to bottom right, #0d0d0d 0%, #ffffff 100%)",
+          "name": "Dark to White Diagonal",
+          "slug": "dark-to-white-diagonal"
+        },
+        {
+          "gradient": "linear-gradient(to bottom, #ffffff 50%, #d4af37 50%)",
+          "name": "White to Gold Half",
+          "slug": "white-to-gold-half"
+        },
+        {
+          "gradient": "linear-gradient(to bottom, #ffd700 0%, #b8860b 100%)",
+          "name": "Bright Gold to Goldenrod",
+          "slug": "bright-gold-to-goldenrod"
+        },
+        {
+          "gradient": "linear-gradient(to bottom right, #0d0d0d 0%, #ffd700 100%)",
+          "name": "Dark to Bright Gold Diagonal",
+          "slug": "dark-to-bright-gold-diagonal"
+        },
+        {
+          "gradient": "linear-gradient(to top, #ffffff 0%, #0d0d0d 100%)",
+          "name": "White to Dark Vertical",
+          "slug": "white-to-dark-vertical"
+        },
+        {
+          "gradient": "linear-gradient(to bottom left, #0d0d0d 0%, #fff5cc 100%)",
+          "name": "Dark to Soft Gold Diagonal",
+          "slug": "dark-to-soft-gold-diagonal"
+        },
+        {
+          "gradient": "linear-gradient(to top right, #d4af37 0%, #ffffff 100%)",
+          "name": "Gold to White Diagonal",
+          "slug": "gold-to-white-diagonal"
+        }
+      ],
+      "palette": [
+        {
+          "color": "#ffffff",
+          "name": "White",
+          "slug": "white"
+        },
+        {
+          "color": "#000000",
+          "name": "Black",
+          "slug": "black"
+        },
+        {
+          "color": "#f5f5f5",
+          "name": "Background",
+          "slug": "background"
+        },
+        {
+          "color": "#0a0a0a",
+          "name": "Foreground",
+          "slug": "foreground"
+        },
+        {
+          "color": "#1d1d1d",
+          "name": "Primary",
+          "slug": "primary"
+        },
+        {
+          "color": "#d4af37",
+          "name": "Secondary",
+          "slug": "secondary"
+        },
+        {
+          "color": "#dddddd",
+          "name": "Border",
+          "slug": "border"
+        },
+        {
+          "color": "#333333",
+          "name": "Body Text",
+          "slug": "body-text"
+        },
+        {
+          "color": "#242424",
+          "name": "Heading",
+          "slug": "heading"
+        },
+        {
+          "color": "#b8860b",
+          "name": "Goldenrod",
+          "slug": "goldenrod"
+        },
+        {
+          "color": "#ffd700",
+          "name": "Bright Gold",
+          "slug": "bright-gold"
+        },
+        {
+          "color": "#daa520",
+          "name": "Light Gold",
+          "slug": "light-gold"
+        },
+        {
+          "color": "#ffcc00",
+          "name": "Vivid Gold",
+          "slug": "vivid-gold"
+        },
+        {
+          "color": "#996515",
+          "name": "Bronze",
+          "slug": "bronze"
+        },
+        {
+          "color": "#ffb84d",
+          "name": "Amber",
+          "slug": "amber"
+        },
+        {
+          "color": "#fff5cc",
+          "name": "Soft Gold",
+          "slug": "soft-gold"
+        }
+      ]
+    }
+  }
+}
